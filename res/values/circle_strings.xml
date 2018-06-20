@@ -24,4 +24,8 @@
      <!-- Device name, seen in Android version -->
      <string name="about_device_name">Device</string>
      <string name="maintainer">Device Maintainer</string>
+     
+     <!-- Hardware info -->
+     <string name="platform_revision">Platform</string>
+     <string name="total_ram">Total RAM</string>
 </resources>
