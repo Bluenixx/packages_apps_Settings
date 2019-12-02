@@ -21,4 +21,6 @@
     <string name="pif_data_title">Select device spoof preset</string>
     <string name="pif_data_summary">Select device spoof preset file to override device properties in applications</string>
 
+     <!-- Device name, seen in Android version -->
+     <string name="about_device_name">Device</string>
 </resources>
