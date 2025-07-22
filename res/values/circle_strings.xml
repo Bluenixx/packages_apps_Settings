@@ -18,5 +18,7 @@
     <string name="device_spoof_summary">Override device properties and attestation keys for system-wide spoofing.</string>
     <string name="keybox_data_title">Select keybox</string>
     <string name="keybox_data_summary">Select a keybox file to spoof key attestation</string>
+    <string name="pif_data_title">Select device spoof preset</string>
+    <string name="pif_data_summary">Select device spoof preset file to override device properties in applications</string>
 
 </resources>
