@@ -184,6 +184,13 @@
     </Preference>
 
     <Preference
+        android:key="device_spoofing"
+        android:order="246"
+        android:title="@string/device_spoof_title"
+        android:summary="@string/device_spoof_summary"
+        android:fragment="com.android.settings.circle.security.DeviceSpoofFragment"/>
+
+    <Preference
         android:order="250"
         android:key="sim_lock_settings"
         android:title="@string/sim_lock_settings_category"
