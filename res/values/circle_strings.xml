@@ -21,11 +21,16 @@
     <string name="pif_data_title">Select device spoof preset</string>
     <string name="pif_data_summary">Select device spoof preset file to override device properties in applications</string>
 
-     <!-- Device name, seen in Android version -->
-     <string name="about_device_name">Device</string>
-     <string name="maintainer">Device Maintainer</string>
+    <!-- User selectable app spoofing -->
+    <string name="user_selectable_app_spoofing_title">Select apps to spoof</string>
+    <string name="user_selectable_app_spoofing_summary">Choose which apps to spoof</string>
+    <string name="user_select_spoofing_profile_title">Select spoofing profile</string>
+
+    <!-- Device name, seen in Android version -->
+    <string name="about_device_name">Device</string>
+    <string name="maintainer">Device Maintainer</string>
      
-     <!-- Hardware info -->
-     <string name="platform_revision">Platform</string>
-     <string name="total_ram">Total RAM</string>
+    <!-- Hardware info -->
+    <string name="platform_revision">Platform</string>
+    <string name="total_ram">Total RAM</string>
 </resources>

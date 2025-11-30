@@ -30,4 +30,11 @@
             android:summary="@string/keybox_data_summary"
             android:defaultValue=""/>
     </PreferenceCategory>
+
+    <Preference
+        android:order="91"
+        android:key="user_selectable_app_spoofing"
+        android:title="@string/user_selectable_app_spoofing_title"
+        android:summary="@string/user_selectable_app_spoofing_summary"
+        android:fragment="com.android.settings.circle.security.UserSelectedAppSpoofSettings" />
 </PreferenceScreen>
