@@ -18,23 +18,32 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="quicksettings_perferences"
     android:title="@string/device_spoof_title" >
+
+    <com.android.settingslib.widget.MainSwitchPreference
+        android:key="circle_pih_enabled"
+        android:title="@string/circle_pih_enabled_title"
+        settings:controller="com.android.settings.circle.security.PihActivationPreferenceController"/>
+
     <PreferenceCategory>
         <com.android.settings.applications.PifDataPreference
             android:key="pif_data_setting"
             android:title="@string/pif_data_title"
             android:summary="@string/pif_data_summary"
+            android:dependency="circle_pih_enabled"
             android:defaultValue=""/>
         <com.android.settings.applications.KeyboxDataPreference
             android:key="keybox_data_setting"
             android:title="@string/keybox_data_title"
             android:summary="@string/keybox_data_summary"
+            android:dependency="circle_pih_enabled"
             android:defaultValue=""/>
+        <Preference
+            android:order="91"
+            android:key="user_selectable_app_spoofing"
+            android:title="@string/user_selectable_app_spoofing_title"
+            android:summary="@string/user_selectable_app_spoofing_summary"
+            android:dependency="circle_pih_enabled"
+            android:fragment="com.android.settings.circle.security.UserSelectedAppSpoofSettings" />
     </PreferenceCategory>
 
-    <Preference
-        android:order="91"
-        android:key="user_selectable_app_spoofing"
-        android:title="@string/user_selectable_app_spoofing_title"
-        android:summary="@string/user_selectable_app_spoofing_summary"
-        android:fragment="com.android.settings.circle.security.UserSelectedAppSpoofSettings" />
 </PreferenceScreen>

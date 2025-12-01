@@ -15,6 +15,7 @@
 
     <!-- Device spoofing -->
     <string name="device_spoof_title">Device spoofing</string>
+    <string name="circle_pih_enabled_title">Enable device spoofing</string>
     <string name="device_spoof_summary">Override device properties and attestation keys for system-wide spoofing.</string>
     <string name="keybox_data_title">Select keybox</string>
     <string name="keybox_data_summary">Select a keybox file to spoof key attestation</string>
