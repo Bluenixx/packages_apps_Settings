@@ -21,6 +21,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- CiRCLE Banner -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/circle_logo"
+        android:key="circle_logo"
+        android:selectable="false"/>
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
