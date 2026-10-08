@@ -21,6 +21,7 @@ import android.os.Build
 import android.os.SystemProperties
 import androidx.preference.Preference
 import com.android.settings.R
+import com.android.settingslib.metadata.preferencesapi.preconditions.PreconditionStability
 import com.android.settingslib.metadata.PreferenceAvailabilityProvider
 import com.android.settingslib.metadata.PreferenceMetadata
 import com.android.settingslib.metadata.PreferenceSummaryProvider
@@ -34,6 +35,14 @@ class AboutDeviceNamePreference :
 
     override val key: String
         get() = "about_device_name"
+
+    override val purpose: Int
+        get() = R.string.about_device_name_purpose
+
+    override fun getAvailabilityStability() = PreconditionStability.STABLE_UNTIL_APK_UPDATE
+
+    override val availabilityDescription: String
+        get() = "Always available"
 
     override val title: Int
         get() = R.string.about_device_name

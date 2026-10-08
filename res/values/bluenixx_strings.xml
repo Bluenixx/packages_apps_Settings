@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="circle_logo_purpose">Mostra o logo da ROM</string>
+    <string name="maintainer_purpose">Mostra o mantenedor do dispositivo</string>
+    <string name="about_device_name_purpose">Mostra o nome do dispositivo</string>
+</resources>
