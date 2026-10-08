@@ -56,6 +56,6 @@ class CiRCLEMaintainerPreference :
     }
 
     companion object {
-        const val ROM_MAINTAINER = "ro.circle.maintainer"
+        const val ROM_MAINTAINER = "ro.bluenixx.maintainer"
     }
 }

@@ -28,7 +28,7 @@ import com.android.settings.core.BasePreferenceController;
 public class CiRCLEMaintainerPreferenceController extends BasePreferenceController {
 
     private static final String TAG = "CiRCLEMaintainerPreferenceController";
-    private static final String ROM_MAINTAINER = "ro.circle.maintainer";
+    private static final String ROM_MAINTAINER = "ro.bluenixx.maintainer";
 
     public CiRCLEMaintainerPreferenceController(Context context, String key) {
         super(context, key);
