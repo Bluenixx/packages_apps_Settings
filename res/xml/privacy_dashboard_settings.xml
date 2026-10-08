@@ -174,9 +174,4 @@
         android:summary="@string/show_clip_access_notification_summary"
         settings:controller="com.android.settings.privacy.ShowClipAccessNotificationPreferenceController"/>
 
-    <Preference
-        android:key="device_spoofing"
-        android:title="@string/device_spoof_title"
-        android:summary="@string/device_spoof_summary"
-        android:fragment="com.android.settings.circle.security.DeviceSpoofFragment"/>
 </PreferenceScreen>
