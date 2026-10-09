@@ -396,13 +396,12 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                     // Apply the insets paddings to the view.
                     v.setPadding(insets.left, 0, insets.right, insets.bottom);
 
-                    // reset the top padding of search bar container to original top padding
-                    // plus insets top.
-                    View container = findViewById(R.id.app_bar_container);
-                    final int top_padding = getResources().getDimensionPixelSize(
-                            R.dimen.search_bar_container_top_padding);
-                    container.setPadding(container.getPaddingLeft(), top_padding + insets.top,
-                            container.getPaddingRight(), container.getPaddingBottom());
+                    // Bluenixx: search bar is docked at the bottom, so the top inset goes to the list.
+                    View scrollable = findViewById(R.id.main_content_scrollable_container);
+                    if (scrollable != null) {
+                        scrollable.setPadding(scrollable.getPaddingLeft(), insets.top,
+                                scrollable.getPaddingRight(), scrollable.getPaddingBottom());
+                    }
 
                     // Return CONSUMED if you don't want the window insets to keep being
                     // passed down to descendant views.
@@ -412,6 +411,14 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 
     private void initSearchBarView() {
         View toolbar = findViewById(R.id.search_action_bar);
+        // Bluenixx: translucent search bar card (~45% opaque).
+        if (toolbar.getParent() instanceof com.google.android.material.card.MaterialCardView) {
+            com.google.android.material.card.MaterialCardView card =
+                    (com.google.android.material.card.MaterialCardView) toolbar.getParent();
+            card.setCardElevation(0f);
+            card.setCardBackgroundColor(androidx.core.graphics.ColorUtils.setAlphaComponent(
+                    card.getCardBackgroundColor().getDefaultColor(), 115));
+        }
         FeatureFactory.getFeatureFactory().getSearchFeatureProvider()
                 .initSearchToolbar(this /* activity */, toolbar,
                         SettingsEnums.SETTINGS_HOMEPAGE);
@@ -440,8 +447,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 
         // Update content background.
         findViewById(android.R.id.content).setBackgroundColor(color);
-        //Update search bar background
-        findViewById(R.id.app_bar_container).setBackgroundColor(color);
+        // Bluenixx: search bar container stays transparent (bar docked at the bottom).
     }
 
     private void showSuggestionFragment(boolean scrollNeeded) {
@@ -727,6 +733,19 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         if (scrollableContainer != null) {
             scrollableContainer.setScrollCaptureHint(
                     View.SCROLL_CAPTURE_HINT_EXCLUDE_DESCENDANTS);
+        }
+
+        // Bluenixx: reserve the docked search bar height at the end of the list.
+        final View appBar = findViewById(R.id.app_bar);
+        if (scrollableContainer != null && appBar != null) {
+            appBar.addOnLayoutChangeListener((v, l, t, r, b, oldL, oldT, oldR, oldB) -> {
+                final int h = b - t;
+                if (scrollableContainer.getPaddingBottom() != h) {
+                    scrollableContainer.setPadding(scrollableContainer.getPaddingLeft(),
+                            scrollableContainer.getPaddingTop(),
+                            scrollableContainer.getPaddingRight(), h);
+                }
+            });
         }
     }
 
