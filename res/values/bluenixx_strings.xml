@@ -3,4 +3,8 @@
     <string name="circle_logo_purpose">Mostra o logo da ROM</string>
     <string name="maintainer_purpose">Mostra o mantenedor do dispositivo</string>
     <string name="about_device_name_purpose">Mostra o nome do dispositivo</string>
+    <string name="bluenixx_blur_category_title">Blur</string>
+    <string name="bluenixx_blur_toggle_title">System blur</string>
+    <string name="bluenixx_blur_toggle_summary">Blur the background of the notification shade, Quick Settings and lock screen</string>
+    <string name="bluenixx_blur_intensity_title">Blur intensity</string>
 </resources>

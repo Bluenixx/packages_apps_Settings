@@ -119,6 +119,24 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="category_bluenixx_blur"
+        android:title="@string/bluenixx_blur_category_title">
+
+        <SwitchPreferenceCompat
+            android:key="bluenixx_blur_enabled"
+            android:title="@string/bluenixx_blur_toggle_title"
+            android:summary="@string/bluenixx_blur_toggle_summary"
+            settings:controller="com.android.settings.display.BluenixxBlurTogglePreferenceController" />
+
+        <com.android.settingslib.widget.SliderPreference
+            android:key="bluenixx_blur_intensity"
+            android:title="@string/bluenixx_blur_intensity_title"
+            android:dependency="bluenixx_blur_enabled"
+            settings:controller="com.android.settings.display.BluenixxBlurIntensityPreferenceController" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="category_key_color"
         android:title="@string/category_name_color"
         android:order="-170">

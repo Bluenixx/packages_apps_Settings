@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bluenixx_blur_category_title">Desfoque</string>
+    <string name="bluenixx_blur_toggle_title">Desfoque do sistema</string>
+    <string name="bluenixx_blur_toggle_summary">Desfoca o fundo da central de notificações, das Configurações rápidas e da tela de bloqueio</string>
+    <string name="bluenixx_blur_intensity_title">Intensidade do desfoque</string>
+</resources>
