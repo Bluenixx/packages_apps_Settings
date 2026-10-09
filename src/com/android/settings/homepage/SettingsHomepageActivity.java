@@ -419,6 +419,21 @@ public class SettingsHomepageActivity extends FragmentActivity implements
             card.setCardBackgroundColor(androidx.core.graphics.ColorUtils.setAlphaComponent(
                     card.getCardBackgroundColor().getDefaultColor(), 115));
         }
+
+        // Bluenixx: blur the list content that scrolls under the docked search bar.
+        final View barContainer = findViewById(R.id.app_bar_container);
+        final androidx.core.widget.NestedScrollView listScroll =
+                findViewById(R.id.main_content_scrollable_container);
+        if (barContainer != null && listScroll != null && toolbar.getParent() instanceof View) {
+            barContainer.setBackground(new SearchBarBackdropBlurDrawable(
+                    (View) toolbar.getParent(), listScroll,
+                    Utils.getColorAttrDefaultColor(this, android.R.attr.colorBackground),
+                    getResources().getDimensionPixelSize(R.dimen.search_bar_blur_radius)));
+            listScroll.setOnScrollChangeListener(
+                    (androidx.core.widget.NestedScrollView.OnScrollChangeListener)
+                            (v, scrollX, scrollY, oldScrollX, oldScrollY) ->
+                                    barContainer.invalidate());
+        }
         FeatureFactory.getFeatureFactory().getSearchFeatureProvider()
                 .initSearchToolbar(this /* activity */, toolbar,
                         SettingsEnums.SETTINGS_HOMEPAGE);
