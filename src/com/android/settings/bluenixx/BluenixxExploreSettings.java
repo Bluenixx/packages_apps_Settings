@@ -48,17 +48,38 @@ public class BluenixxExploreSettings extends DashboardFragment {
 
     private void saveIcon(Uri uri) {
         if (uri == null) return;
+
         try (InputStream in = getContentResolver().openInputStream(uri)) {
+            if (in == null) {
+                throw new java.io.IOException("Não foi possível abrir a imagem");
+            }
+
             Bitmap src = BitmapFactory.decodeStream(in);
+            if (src == null) {
+                Toast.makeText(getContext(), "PNG inválido", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             Bitmap bmp = Bitmap.createScaledBitmap(src, 128, 128, true);
             ByteArrayOutputStream out = new ByteArrayOutputStream();
-            bmp.compress(Bitmap.CompressFormat.PNG, 100, out);
+            if (!bmp.compress(Bitmap.CompressFormat.PNG, 100, out)) {
+                Toast.makeText(getContext(), "Falha ao processar PNG", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             String b64 = Base64.encodeToString(out.toByteArray(), Base64.NO_WRAP);
             if (b64.length() > 16000) {
                 Toast.makeText(getContext(), "Imagem muito complexa", Toast.LENGTH_SHORT).show();
                 return;
             }
-            Settings.System.putString(getContentResolver(), KEY_FP_ICON, b64);
+
+            boolean saved = Settings.System.putString(
+                    getContentResolver(), KEY_FP_ICON, b64);
+            Toast.makeText(
+                    getContext(),
+                    saved ? "Ícone salvo" : "Falha ao salvar ícone",
+                    Toast.LENGTH_SHORT
+            ).show();
         } catch (Exception e) {
             Toast.makeText(getContext(), "PNG inválido", Toast.LENGTH_SHORT).show();
         }
