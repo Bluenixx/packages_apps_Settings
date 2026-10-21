@@ -2,6 +2,20 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="Tela de bloqueio">
 
+    <PreferenceCategory android:title="Relógio da tela de bloqueio">
+        <Preference
+            android:key="bluenixx_clock_reset"
+            android:title="Remover fonte personalizada"
+            android:summary="Restaurar a fonte original sem alterar o estilo do relógio" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Fonte do relógio">
+        <Preference
+            android:key="bluenixx_clock_font_pick"
+            android:title="Importar fonte"
+            android:summary="Selecionar um arquivo TTF ou OTF para o relógio da tela de bloqueio" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="Impressão digital">
         <Preference
             android:key="bluenixx_fp_pick"
