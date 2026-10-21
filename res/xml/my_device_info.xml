@@ -23,9 +23,9 @@
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="my_device_info_header"
-        android:layout="@layout/settings_entity_header"
+        android:layout="@layout/about_device_banner"
         android:selectable="false"
-        settings:isPreferenceVisible="false"/>
+        settings:isPreferenceVisible="true"/>
 
     <PreferenceCategory
         android:key="basic_info_category"
@@ -63,7 +63,8 @@
 
     <PreferenceCategory
         android:key="legal_category"
-        android:title="@string/my_device_info_legal_category_title">
+        android:title="@string/my_device_info_legal_category_title"
+        settings:isPreferenceVisible="false">
 
         <!-- Legal information -->
         <Preference
@@ -159,14 +160,15 @@
         android:key="device_identifiers_category"
         android:title="@string/my_device_info_device_identifiers_category_title">
 
-        <!--IP address -->
+        <!-- IP address -->
         <Preference
             android:key="wifi_ip_address"
             android:order="44"
             android:title="@string/wifi_ip_address"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
-            settings:enableCopying="true"/>
+            settings:enableCopying="true"
+            settings:isPreferenceVisible="false"/>
 
         <!-- Wi-Fi MAC address -->
         <Preference
@@ -175,7 +177,8 @@
             android:title="@string/status_wifi_mac_address"
             android:summary="@string/view_saved_network"
             android:fragment="com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2"
-            settings:enableCopying="false"/>
+            settings:enableCopying="false"
+            settings:isPreferenceVisible="false"/>
 
         <!-- Factory Wi-Fi MAC address -->
         <Preference
@@ -184,7 +187,8 @@
             android:title="@string/status_device_wifi_mac_address"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
-            settings:enableCopying="true"/>
+            settings:enableCopying="true"
+            settings:isPreferenceVisible="false"/>
 
         <!-- Bluetooth address -->
         <Preference
@@ -193,7 +197,8 @@
             android:title="@string/status_bt_address"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
-            settings:enableCopying="true"/>
+            settings:enableCopying="true"
+            settings:isPreferenceVisible="false"/>
 
         <!-- Device up time -->
         <Preference
