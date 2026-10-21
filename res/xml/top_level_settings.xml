@@ -123,7 +123,7 @@
 
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.bluenixx.BluenixxExploreSettings"
-            android:icon="@drawable/ic_settings_display_filled"
+            android:icon="@drawable/ic_bluenixx_explore"
             android:key="top_level_bluenixx_explore"
             android:order="-30"
             android:title="Bluenixx Explore"
