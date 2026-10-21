@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Tela">
+
+    <PreferenceCategory android:title="Dynamic Bar">
+
+        <SwitchPreferenceCompat
+            android:key="bluenixx_dynamic_bar_enabled"
+            android:title="Ativar Dynamic Bar"
+            android:summary="Exibir informações e atividades na cápsula"
+            android:persistent="false"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="bluenixx_dynamic_bar_media"
+            android:title="Player de mídia"
+            android:summary="Exibir música, artista e capa"
+            android:persistent="false"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="bluenixx_dynamic_bar_notifications"
+            android:title="Notificações"
+            android:summary="Permitir eventos de notificações compatíveis"
+            android:persistent="false"
+            android:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            android:key="bluenixx_dynamic_bar_charging"
+            android:title="Carregamento"
+            android:summary="Exibir o estado de carregamento da bateria"
+            android:persistent="false"
+            android:defaultValue="true" />
+
+
+        <SwitchPreferenceCompat
+            android:key="bluenixx_disable_secure_windows"
+            android:title="Permitir capturas em apps protegidos"
+            android:summary="Permite capturas de tela e gravações em janelas que bloqueiam esse recurso"
+            android:persistent="false"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

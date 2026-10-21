@@ -2,46 +2,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="Bluenixx Explore">
 
-    <PreferenceCategory android:title="Tela de bloqueio">
-        <Preference
-            android:key="bluenixx_fp_pick"
-            android:title="Ícone da impressão digital"
-            android:summary="Importar um PNG" />
+    <Preference
+        android:key="bluenixx_explore_lock_screen"
+        android:title="Tela de bloqueio"
+        android:summary="Ícone da impressão digital"
+        android:fragment="com.android.settings.bluenixx.BluenixxExploreLockScreenSettings" />
 
-        <Preference
-            android:key="bluenixx_fp_reset"
-            android:title="Restaurar ícone padrão" />
-    </PreferenceCategory>
+    <Preference
+        android:key="bluenixx_explore_display"
+        android:title="Tela"
+        android:summary="Dynamic Bar e opções de exibição"
+        android:fragment="com.android.settings.bluenixx.BluenixxExploreDisplaySettings" />
 
-    <PreferenceCategory android:title="Dynamic Bar">
-
-        <SwitchPreferenceCompat
-            android:key="bluenixx_dynamic_bar_enabled"
-            android:title="Ativar Dynamic Bar"
-            android:summary="Exibir informações e atividades na cápsula"
-            android:persistent="false"
-            android:defaultValue="true" />
-
-        <SwitchPreferenceCompat
-            android:key="bluenixx_dynamic_bar_media"
-            android:title="Player de mídia"
-            android:summary="Exibir música, artista e capa"
-            android:persistent="false"
-            android:defaultValue="true" />
-
-        <SwitchPreferenceCompat
-            android:key="bluenixx_dynamic_bar_notifications"
-            android:title="Notificações"
-            android:summary="Permitir eventos de notificações compatíveis"
-            android:persistent="false"
-            android:defaultValue="true" />
-
-        <SwitchPreferenceCompat
-            android:key="bluenixx_dynamic_bar_charging"
-            android:title="Carregamento"
-            android:summary="Exibir o estado de carregamento da bateria"
-            android:persistent="false"
-            android:defaultValue="true" />
-
-    </PreferenceCategory>
 </PreferenceScreen>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Tela de bloqueio">
+
+    <PreferenceCategory android:title="Impressão digital">
+        <Preference
+            android:key="bluenixx_fp_pick"
+            android:title="Ícone da impressão digital"
+            android:summary="Importar um PNG" />
+
+        <Preference
+            android:key="bluenixx_fp_reset"
+            android:title="Restaurar ícone padrão" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
