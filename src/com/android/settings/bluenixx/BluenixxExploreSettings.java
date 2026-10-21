@@ -106,7 +106,27 @@ public class BluenixxExploreSettings extends DashboardFragment {
                 return;
             }
 
-            Bitmap bmp = Bitmap.createScaledBitmap(src, 128, 128, true);
+            // Fit the source inside a 128x128 transparent canvas without stretching
+            // or cropping it. This keeps the original aspect ratio and alpha channel.
+            final int maxSize = 128;
+            float scale = Math.min(
+                    (float) maxSize / src.getWidth(),
+                    (float) maxSize / src.getHeight());
+            int width = Math.max(1, Math.round(src.getWidth() * scale));
+            int height = Math.max(1, Math.round(src.getHeight() * scale));
+            Bitmap scaled = Bitmap.createScaledBitmap(src, width, height, true);
+            Bitmap bmp = Bitmap.createBitmap(maxSize, maxSize, Bitmap.Config.ARGB_8888);
+            android.graphics.Canvas canvas = new android.graphics.Canvas(bmp);
+            float left = (maxSize - width) / 2f;
+            float top = (maxSize - height) / 2f;
+            canvas.drawBitmap(scaled, left, top, null);
+            if (scaled != src) {
+                scaled.recycle();
+            }
+            if (src != bmp && !src.isRecycled()) {
+                src.recycle();
+            }
+
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             if (!bmp.compress(Bitmap.CompressFormat.PNG, 100, out)) {
                 Toast.makeText(getContext(), "Falha ao processar PNG", Toast.LENGTH_SHORT).show();
