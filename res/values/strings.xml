@@ -15104,7 +15104,7 @@
     <string name="help_url_audio_sharing" translatable="false"></string>
 
     <!-- Text for Search bar of Settings home screen [CHAR LIMIT=34] -->
-    <string name="homepage_search">Search Settings</string>
+    <string name="homepage_search">Search</string>
 
     <!-- Keywords for contacts storage item [CHAR LIMIT=NONE] -->
     <string name="keywords_contacts_storage">contacts, storage, account</string>
