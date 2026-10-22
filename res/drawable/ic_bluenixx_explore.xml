@@ -1,15 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="48dp"
     android:height="48dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
 
+    <!-- White compass rose: transparent background -->
     <path
-        android:fillColor="#1769FF"
-        android:pathData="M16,0 L92,0 C100.84,0 108,7.16 108,16 L108,92 C108,100.84 100.84,108 92,108 L16,108 C7.16,108 0,100.84 0,92 L0,16 C0,7.16 7.16,0 16,0 Z" />
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,8 L65,43 L100,54 L65,65 L54,100 L43,65 L8,54 L43,43 Z" />
 
+    <!-- Small discovery sparkle -->
     <path
-        android:fillColor="#FFFFFF"
-        android:fillType="evenOdd"
-        android:pathData="M29,20 L56,20 C75,20 86,29 86,43 C86,51 82,57 74,60 C84,63 90,70 90,80 C90,95 77,101 56,101 L29,101 Z M44,33 L44,51 L56,51 C65,51 71,48 71,42 C71,36 66,33 56,33 Z M44,65 L44,87 L57,87 C68,87 75,84 75,76 C75,68 68,65 57,65 Z" />
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M84,12 L88,23 L99,27 L88,31 L84,42 L80,31 L69,27 L80,23 Z" />
 </vector>
