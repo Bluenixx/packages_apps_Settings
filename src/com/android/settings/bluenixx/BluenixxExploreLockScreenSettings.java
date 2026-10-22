@@ -105,8 +105,8 @@ public class BluenixxExploreLockScreenSettings extends DashboardFragment {
     private void saveClockFont(Uri uri) {
         if (uri == null) return;
 
-        File cachedFont = new File(getCacheDir(), "bluenixx_clock_font.ttf");
-        File tempFont = new File(getCacheDir(), "bluenixx_clock_font.tmp");
+        File cachedFont = new File(requireContext().getCacheDir(), "bluenixx_clock_font.ttf");
+        File tempFont = new File(requireContext().getCacheDir(), "bluenixx_clock_font.tmp");
 
         try (InputStream in = getContentResolver().openInputStream(uri);
              FileOutputStream out = new FileOutputStream(tempFont)) {
