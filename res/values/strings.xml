@@ -15593,9 +15593,9 @@
 
     <!-- Bluenixx: About / ROM info -->
     <string name="bluenixx_rom_name" translatable="false">Bluenixx</string>
-    <string name="bluenixx_maintainer_name" translatable="false">ZedissP</string>
-    <string name="bluenixx_about_rom_category">Sobre a ROM</string>
+    <string name="bluenixx_maintainer_name" translatable="false">Unknown</string>
+    <string name="bluenixx_about_rom_category">About ROM</string>
     <string name="bluenixx_about_rom_title">ROM</string>
     <string name="bluenixx_about_maintainer_title">Maintainer</string>
-    <string name="bluenixx_about_maintainer_chip_text" translatable="false">Maintainer · ZedissP</string>
+    <string name="bluenixx_about_maintainer_chip_text" translatable="false">Maintainer · Unknown</string>
 </resources>
