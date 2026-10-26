@@ -80,8 +80,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="28dp"
-                android:layout_marginEnd="28dp"/>
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
 
         </FrameLayout>
     </com.google.android.material.appbar.AppBarLayout>

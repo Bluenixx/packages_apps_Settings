@@ -28,6 +28,28 @@
         settings:isPreferenceVisible="true"/>
 
     <PreferenceCategory
+        android:key="bluenixx_rom_category"
+        android:selectable="false"
+        android:title="@string/bluenixx_about_rom_category">
+
+        <Preference
+            android:key="bluenixx_rom_name"
+            android:order="0"
+            android:selectable="false"
+            android:title="@string/bluenixx_about_rom_title"
+            android:summary="@string/bluenixx_rom_name"
+            settings:enableCopying="true"/>
+
+        <Preference
+            android:key="bluenixx_maintainer"
+            android:order="1"
+            android:selectable="false"
+            android:title="@string/bluenixx_about_maintainer_title"
+            android:summary="@string/bluenixx_maintainer_name"
+            settings:enableCopying="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
         android:title="@string/my_device_info_basic_info_category_title">

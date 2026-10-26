@@ -4,12 +4,14 @@
 
     <Preference
         android:key="bluenixx_explore_lock_screen"
+        android:icon="@drawable/ic_bluenixx_lock_screen"
         android:title="Tela de bloqueio"
         android:summary="Ícone da impressão digital"
         android:fragment="com.android.settings.bluenixx.BluenixxExploreLockScreenSettings" />
 
     <Preference
         android:key="bluenixx_explore_display"
+        android:icon="@drawable/ic_bluenixx_display"
         android:title="Tela"
         android:summary="Dynamic Bar e opções de exibição"
         android:fragment="com.android.settings.bluenixx.BluenixxExploreDisplaySettings" />

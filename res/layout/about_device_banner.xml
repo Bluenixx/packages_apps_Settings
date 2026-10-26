@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- MD3 Expressive About banner: logo tonal, nome da ROM e chip do maintainer -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp">
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp">
 
-    <ImageView
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:background="@drawable/about_banner_logo_bg">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_bluenixx_explore"
+            android:tint="@color/settingslib_materialColorOnPrimaryContainer" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_circle_banner"
-        android:tint="?android:attr/textColorPrimary"
-        android:adjustViewBounds="true"
-        android:scaleType="centerInside"
-        android:contentDescription="@null" />
+        android:layout_marginTop="16dp"
+        android:fontFamily="@*android:string/config_headlineFontFamily"
+        android:text="@string/bluenixx_rom_name"
+        android:textColor="@color/settingslib_materialColorOnSurface"
+        android:textSize="32sp" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/about_banner_chip_bg"
+        android:fontFamily="@*android:string/config_bodyFontFamilyMedium"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="6dp"
+        android:text="@string/bluenixx_about_maintainer_chip_text"
+        android:textColor="@color/settingslib_materialColorOnSecondaryContainer"
+        android:textSize="14sp" />
+</LinearLayout>
