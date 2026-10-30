@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Quick Settings">
+
+    <PreferenceCategory android:title="Estilo do painel">
+
+        <SwitchPreferenceCompat
+            android:key="bluenixx_qs_coloros_style"
+            android:title="Quick Settings estilo ColorOS"
+            android:summary="Usar o painel com tiles circulares, cartão de mídia e efeito de vidro. Desativado, mantém o painel padrão MD3."
+            android:persistent="false"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

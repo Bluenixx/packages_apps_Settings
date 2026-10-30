@@ -231,6 +231,7 @@ public class SettingsGateway {
     public static final String[] ENTRY_FRAGMENTS = {
             com.android.settings.bluenixx.BluenixxExploreSettings.class.getName(),
             com.android.settings.bluenixx.BluenixxExploreDisplaySettings.class.getName(),
+            com.android.settings.bluenixx.BluenixxExploreQuickSettings.class.getName(),
             com.android.settings.bluenixx.BluenixxExploreLockScreenSettings.class.getName(),
             AdvancedConnectedDeviceDashboardFragment.class.getName(),
             CreateShortcut.class.getName(),

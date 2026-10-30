@@ -16,4 +16,10 @@
         android:summary="Dynamic Bar e opções de exibição"
         android:fragment="com.android.settings.bluenixx.BluenixxExploreDisplaySettings" />
 
+    <Preference
+        android:key="bluenixx_explore_quick_settings"
+        android:title="Quick Settings"
+        android:summary="Escolha o estilo do painel de configurações rápidas"
+        android:fragment="com.android.settings.bluenixx.BluenixxExploreQuickSettings" />
+
 </PreferenceScreen>
